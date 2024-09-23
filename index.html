@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function calculateRunningPercent() {
+            const totalLectures = parseFloat(document.getElementById('totalLectures').value);
+            const totalAttended = parseFloat(document.getElementById('totalAttended').value);
+            if (!isNaN(totalLectures) && !isNaN(totalAttended) && totalLectures > 0) {
+                const runningPercent = (totalAttended / totalLectures) * 100;
+                document.getElementById('runningPercent').value = runningPercent.toFixed(2);
+            }
+        }
+
+        function calculateLecturesRequired() {
+            const totalLectures = parseFloat(document.getElementById('totalLectures').value);
+            const totalAttended = parseFloat(document.getElementById('totalAttended').value);
+            const requiredPercent = parseFloat(document.getElementById('requiredPercent').value);
+            if (!isNaN(totalLectures) && !isNaN(totalAttended) && !isNaN(requiredPercent) && requiredPercent > 0) {
+                const lecturesRequired = Math.ceil((requiredPercent / 100 * totalLectures - totalAttended) / (1 - requiredPercent / 100));
+                document.getElementById('lecturesRequired').value = lecturesRequired;
+            }
+        }
+
+        function calculateWeeksRequired() {
+            const lecturesPerWeek = parseFloat(document.getElementById('lecturesPerWeek').value);
+            const lecturesRequired = parseFloat(document.getElementById('lecturesRequired').value);
+            if (!isNaN(lecturesPerWeek) && !isNaN(lecturesRequired) && lecturesPerWeek > 0) {
+                const weeksRequired = Math.ceil(lecturesRequired / lecturesPerWeek);
+                document.getElementById('weeksRequired').value = weeksRequired;
+            }
+        }
+
+        function resetFields() {
+            document.getElementById('totalLectures').value = '';
+            document.getElementById('totalAttended').value = '';
+            document.getElementById('runningPercent').value = '';
+            document.getElementById('requiredPercent').value = '';
+            document.getElementById('lecturesPerWeek').value = '';
+            document.getElementById('lecturesRequired').value = '';
+            document.getElementById('weeksRequired').value = '';
+            document.getElementById('presentDaysPerWeek').value = '';
+        }
+    </script>
+</head>
+<body class="flex flex-col items-center justify-center h-screen bg-gray-100">
+    <!-- Header Section -->
+    <header class="mb-4">
+        <h1 class="text-2xl font-bold">Advance Attendance Calculator</h1>
+    </header>
+
+    <div class="bg-white border border-gray-300 p-4 rounded shadow-md w-64">
+        <div class="mb-2">
+            <label class="block text-xs">Total lectures</label>
+            <input type="number" id="totalLectures" class="w-full border border-gray-300 rounded p-1 text-xs">
+        </div>
+        <div class="mb-2">
+            <label class="block text-xs">Total attended</label>
+            <input type="number" id="totalAttended" class="w-full border border-gray-300 rounded p-1 text-xs">
+        </div>
+        <div class="flex items-center mb-2">
+            <label class="block text-xs flex-1">Running Percent</label>
+            <input type="text" id="runningPercent" class="w-16 border border-gray-300 rounded p-1 text-xs" readonly>
+            <button onclick="calculateRunningPercent()" class="ml-2 bg-gray-200 text-xs px-2 py-1 rounded">Show</button>
+        </div>
+        <div class="mb-2">
+            <label class="block text-xs">Percent you require</label>
+            <input type="number" id="requiredPercent" class="w-full border border-gray-300 rounded p-1 text-xs">
+        </div>
+        <div class="mb-2">
+            <label class="block text-xs">No. of lectures per week</label>
+            <input type="number" id="lecturesPerWeek" class="w-full border border-gray-300 rounded p-1 text-xs">
+        </div>
+        <div class="flex items-center mb-2">
+            <label class="block text-xs flex-1">No. of lectures required (if daily attended)</label>
+            <input type="text" id="lecturesRequired" class="w-16 border border-gray-300 rounded p-1 text-xs" readonly>
+            <button onclick="calculateLecturesRequired()" class="ml-2 bg-green-600 text-white text-xs px-2 py-1 rounded">Show</button>
+        </div>
+        <div class="mb-2">
+            <label class="block text-xs">Present days per week</label>
+            <input type="number" id="presentDaysPerWeek" class="w-full border border-gray-300 rounded p-1 text-xs">
+        </div>
+        <div class="flex items-center mb-2">
+            <label class="block text-xs flex-1">No. of weeks required</label>
+            <input type="text" id="weeksRequired" class="w-16 border border-gray-300 rounded p-1 text-xs" readonly>
+            <button onclick="calculateWeeksRequired()" class="ml-2 bg-gray-200 text-xs px-2 py-1 rounded">Show</button>
+        </div>
+        <div class="flex justify-center">
+            <button onclick="resetFields()" class="bg-red-500 text-white text-xs px-4 py-1 rounded">Reset</button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="mt-4">
+        <p class="text-xs text-gray-500">Created by Aasav C.</p>
+    </footer>
+</body>
+                </html>
