@@ -1,4 +1,4 @@
-# Attendance Calculator
+# Attendance Calculator by Aasav
 
 This is a simple web-based attendance calculator that helps students track their attendance and calculate the number of lectures and weeks required to meet their desired attendance percentage.
 
