@@ -1,16 +1,9 @@
 ---
-
 # Attendance Calculator by Aasav
 
 This is a simple web-based attendance calculator that helps students track their attendance and calculate the number of lectures and weeks required to meet their desired attendance percentage.
 
-## Features
-
-- **Calculate Running Attendance Percentage**: Input the total number of lectures and the number of attended lectures to see your current attendance percentage.
-- **Calculate Required Lectures**: Determine how many more lectures you need to attend to meet a specified attendance requirement.
-- **Weeks Calculation**: Based on the number of lectures you attend per week, the calculator can estimate how many weeks are needed to meet your attendance goal.
-- **Reset Fields**: Clear all inputs and start a new calculation easily.
-
+---
 ## 🚀 Live Demo
 
 Experience the Attendance Calculator in action!  
@@ -19,6 +12,14 @@ Experience the Attendance Calculator in action!
 Explore the full functionality directly in your browser, no installation required!
 
 ---
+
+## Features
+
+- **Calculate Running Attendance Percentage**: Input the total number of lectures and the number of attended lectures to see your current attendance percentage.
+- **Calculate Required Lectures**: Determine how many more lectures you need to attend to meet a specified attendance requirement.
+- **Weeks Calculation**: Based on the number of lectures you attend per week, the calculator can estimate how many weeks are needed to meet your attendance goal.
+- **Reset Fields**: Clear all inputs and start a new calculation easily.
+
 
 ## Technologies Used
 
