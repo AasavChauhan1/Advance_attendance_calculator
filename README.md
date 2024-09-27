@@ -1,3 +1,5 @@
+---
+
 # Attendance Calculator by Aasav
 
 This is a simple web-based attendance calculator that helps students track their attendance and calculate the number of lectures and weeks required to meet their desired attendance percentage.
@@ -8,6 +10,15 @@ This is a simple web-based attendance calculator that helps students track their
 - **Calculate Required Lectures**: Determine how many more lectures you need to attend to meet a specified attendance requirement.
 - **Weeks Calculation**: Based on the number of lectures you attend per week, the calculator can estimate how many weeks are needed to meet your attendance goal.
 - **Reset Fields**: Clear all inputs and start a new calculation easily.
+
+## 🚀 Live Demo
+
+Experience the Attendance Calculator in action!  
+👉 [**Click here to try the live demo**](https://advanceattendance.netlify.app/) 👈
+
+Explore the full functionality directly in your browser, no installation required!
+
+---
 
 ## Technologies Used
 
