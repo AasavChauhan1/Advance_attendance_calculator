@@ -6,7 +6,7 @@ This is a simple web-based attendance calculator that helps students track their
 ---
 ## 🚀 Live Demo
 
-Experience the Attendance Calculator in action!  
+Experience the Advance Attendance Calculator in action!  
 👉 [**Click here to try the live demo**](https://advanceattendance.netlify.app/) 👈
 
 Explore the full functionality directly in your browser, no installation required!
