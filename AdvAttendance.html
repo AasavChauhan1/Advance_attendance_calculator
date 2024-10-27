@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance Calculator</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <!-- For images folder -->
+    <link rel="icon" href="images/favicon.png" type="image/x-icon"> 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         function calculateRunningPercent() {
@@ -46,8 +46,7 @@
         }
     </script>
 </head>
-<body class="flex flex-col items-center justify-center h-screen bg-gray-100">
-    <!-- Header Section -->
+<body class="flex flex-col items-center justify-center min-h-screen" style="background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
     <header class="mb-4">
         <h1 class="text-2xl font-bold">Advance Attendance Calculator</h1>
     </header>
@@ -70,15 +69,16 @@
             <label class="block text-xs">Percent you require</label>
             <input type="number" id="requiredPercent" class="w-full border border-gray-300 rounded p-1 text-xs">
         </div>
-        <div class="mb-2">
-            <label class="block text-xs">No. of lectures per week</label>
-            <input type="number" id="lecturesPerWeek" class="w-full border border-gray-300 rounded p-1 text-xs">
-        </div>
         <div class="flex items-center mb-2">
             <label class="block text-xs flex-1">No. of lectures required (if daily attended)</label>
             <input type="text" id="lecturesRequired" class="w-16 border border-gray-300 rounded p-1 text-xs" readonly>
             <button onclick="calculateLecturesRequired()" class="ml-2 bg-green-600 text-white text-xs px-2 py-1 rounded">Show</button>
         </div>
+        <div class="mb-2">
+            <label class="block text-xs">No. of lectures per week</label>
+            <input type="number" id="lecturesPerWeek" class="w-full border border-gray-300 rounded p-1 text-xs">
+        </div>
+
         <div class="mb-2">
             <label class="block text-xs">Present days per week</label>
             <input type="number" id="presentDaysPerWeek" class="w-full border border-gray-300 rounded p-1 text-xs">
@@ -93,9 +93,8 @@
         </div>
     </div>
 
-    <!-- Footer Section -->
     <footer class="mt-4">
-        <p class="text-xs text-gray-500">Created by Aasav C.</p>
+        <p class="text-xs text-gray-500">Created by <a href="https://api.whatsapp.com/send?phone=919998800368&text=Hey+Aasav%21+%F0%9F%91%8BI+found+your+Advance+Attendance+calculator.+It%27s+really+cool%21&_fb_noscript=1" target="_blank">Aasav C.</a></p>
     </footer>
 </body>
-                </html>
+</html>
